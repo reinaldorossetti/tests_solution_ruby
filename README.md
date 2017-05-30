@@ -1,2 +1,2 @@
 # tests_solution_ruby
-Problema e soluções em ruby.
+Problemas e soluções em ruby.
