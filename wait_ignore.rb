@@ -8,7 +8,8 @@
           wait.until { driver.title }
         end
 
-        def wait_for_element(locator)
-          wait = Wait.new(timeout: 25, ignore: Error::NoSuchElementError)
-          wait.until { driver.find_element(locator) }
+        def wait_for_alert
+           wait = Selenium::WebDriver::Wait.new ignore: Selenium::WebDriver::Error::NoAlertPresentError
+           alert = wait.until { @driver.switch_to.alert }
+           alert
         end
