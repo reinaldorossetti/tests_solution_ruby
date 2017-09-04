@@ -1,6 +1,5 @@
 def start_test(path)
   Dir.new(path).each { |file|
-    puts file
     if file == "." or file == ".."
       next
     else
