@@ -47,7 +47,7 @@ Benchmark.bm do |bm|
     end
   end
 
-  puts "'watir-webdriver-performance"
+  puts "'watir-webdriver"
   bm.report do
     iterations.times do
       require 'watir-webdriver'
