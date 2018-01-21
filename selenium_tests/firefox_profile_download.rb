@@ -4,7 +4,7 @@
     $download_dir_atual = File.expand_path File.dirname(__FILE__) + '../../downloads'
     profile['browser.download.folderList'] = 2
     profile['pdfjs.disabled'] = true
-    profile['browser.download.dir'] = $download_dir_atual.gsub("/", "\\\\") #"C:\\GitSpread\\ProjetoDasa\\features\\downloads"
+    profile['browser.download.dir'] = $download_dir_atual.gsub("/", "\\\\") #"C:\\path_project\\features\\downloads"
     profile['browser.helperApps.neverAsk.saveToDisk']= "application/pdf, application/x-pkcs7, text/xml, text/csv, text/plain, text/log, application/zip, application/x-gzip, text/html, application/excel, application/vnd.ms-excel, application/x-excel, application/x-msexcel"
 
     # limpar o cache
