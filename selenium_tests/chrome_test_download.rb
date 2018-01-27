@@ -1,4 +1,5 @@
-    prefs = {
+$download_dir_atual = File.expand_path File.dirname(__FILE__) + '../../downloads'   
+prefs = {
         download: {
             prompt_for_download: false,
             default_directory: $download_dir_atual
@@ -6,7 +7,7 @@
         plugins: {
             always_open_pdf_externally: true
         }
-    }
-    args = ["--start-maximized"]
+        }
 
-    Capybara::Selenium::Driver.new(app, browser: :chrome, prefs: prefs, :args => args)
+args = ["--start-maximized"]
+Capybara::Selenium::Driver.new(app, browser: :chrome, prefs: prefs, :args => args)
