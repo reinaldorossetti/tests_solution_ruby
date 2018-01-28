@@ -38,13 +38,16 @@ def apply_desc
     array.each_with_index {|item, index_i|
       itens.each_with_index {|array2|
         if array2[0]==array[0] and array[2]>=array2[2]
-
+          desc = (array2[3].to_f/array2[2].to_f)/array2[1].to_f
+          quant = (array[2]/array2[2]).divmod 1
+          #p quant[0]
+          array[1] = desc * quant[0]
         end
       }
     }
   }
 end
 
-array = to_array("AAABCDDD")
+array = to_array("AAABCDDDDD")
 p apply_values
 p apply_desc
