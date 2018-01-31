@@ -7,7 +7,7 @@ class Account
   def apply_values
     dic_values = Hash[$itens.zip($values)]
     $array_quant.each_with_index {|array, index_q|
-      array.each_with_index {|item, index_i|
+      array.each {|item|
         dic_values.each {|key, value|
           $array_quant[index_q].insert(1, value*(array[1])) if key == item
         }}
@@ -16,20 +16,19 @@ class Account
 
   def apply_desc
     # pegar os itens que estão em desconto.
-    itens = $array_m.reject {|array| array[2]==0}
-    $array_quant.each {|array|
-      array.each_with_index {
-        itens.each_with_index {|array_itens|
-          if array_itens[0]==array[0] and array[2]>=array_itens[2]
-            # calcula o valor em porcentagem do desconto.
-            desconto = (array_itens[3].to_f/array_itens[2].to_f)/array_itens[1].to_f
-            quant = (array[2]/array_itens[2]).floor
-            itens_sem_desc = array[2]-(array_itens[2]*quant)
-            valor_unit = array_itens[1]
-            valor_com_desc = (((array_itens[1]*array_itens[2])*quant)*desconto).to_i
+    # calcula o valor em porcentagem do desconto..
+    $prod_com_d.each {|array|
+      array.each {
+        $itens_em_desc.each_with_index {|item_desc|
+          if item_desc[0]==array[0]
+            desconto = (item_desc[3].to_f/item_desc[2].to_f)/item_desc[1].to_f
+            quant = (array[2]/item_desc[2]).floor
+            itens_sem_desc = array[2]-(item_desc[2]*quant)
+            valor_unit = item_desc[1]
+            valor_com_desc = (((item_desc[1]*item_desc[2])*quant)*desconto).to_i
             array[1] = valor_com_desc+(valor_unit*itens_sem_desc)
           end
         }}
-    }
+    } $prod_com_d.concat($prod_sem_d) 
   end
 end
