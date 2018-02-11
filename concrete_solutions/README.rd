@@ -8,6 +8,6 @@ Teste da Concrete Solutions, um teste para aplicar os descontos em produtos, os 
 
 Para iniciar o teste é somente rodar o arquivo na linha de comando.
 
-```ruby
+```
 ruby run_tests.rb
 ```
