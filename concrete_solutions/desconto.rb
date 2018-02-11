@@ -15,11 +15,10 @@ class Account
   end
 
   def apply_desc
-    # pegar os itens que est√£o em desconto.
+    # pegar os itens que est„o em desconto.
     # calcula o valor em porcentagem do desconto..
-    $prod_com_d.each {|array|
-      array.each {
-        $itens_em_desc.each_with_index {|item_desc|
+    $prod_com_d.map { |array|
+        $itens_em_desc.each{|item_desc|
           if item_desc[0]==array[0]
             desconto = (item_desc[3].to_f/item_desc[2].to_f)/item_desc[1].to_f
             quant = (array[2]/item_desc[2]).floor
@@ -28,7 +27,8 @@ class Account
             valor_com_desc = (((item_desc[1]*item_desc[2])*quant)*desconto).to_i
             array[1] = valor_com_desc+(valor_unit*itens_sem_desc)
           end
-        }}
-    } $prod_com_d.concat($prod_sem_d) 
+        }
+    } 
+    $prod_com_d.concat($prod_sem_d).sort!
   end
 end
