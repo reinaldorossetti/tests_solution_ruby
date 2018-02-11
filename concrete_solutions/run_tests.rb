@@ -13,7 +13,7 @@ list = [[0, ""],[50, "A"],[80, "AB"], [115, "CDBA"], [100, "AA"], [130, "AAA"],[
 
 new_array = list.map{|array| array.reverse}
 new_array.each{ |array|
-	to_array(array[0])
+	to_array(array[0]) # envia os itens para calcular o valor.
   	p test.apply_values # sem desconto.
   	p result = test.apply_desc # com desconto.
 	p comparacao = (result.map{|arr| arr[1] }).sum==array[1] # meu teste unitario comparando com o valor do array.
