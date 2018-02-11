@@ -5,3 +5,8 @@ Teste da Concrete Solutions, um teste para aplicar os descontos em produtos, os 
 - Fiz um módulo chamado de DataBase, ele vai tratar as informações que preciso para realizar os testes.
 - Poderia ter deixado em menos linhas, mas ia ficar dificil de entender depois.
 - Não fiz attr_acessor ou attr_name, não achei que tinha necessidade pois não estou usando em nenhum lugar, trato os dados pelo módulo. Mas em uma aplicação Web seria interessante fazer.
+
+Para iniciar o teste é somente rodar o arquivo na linha de comando.
+```
+ruby run_tests.rb
+```
