@@ -14,9 +14,9 @@ class Account
     }
   end
 
+  # pegar os itens que est√£o em desconto.
+  # calcula o valor em porcentagem do desconto..
   def apply_desc
-    # pegar os itens que est„o em desconto.
-    # calcula o valor em porcentagem do desconto..
     $prod_com_d.map { |array|
         $itens_em_desc.each{|item_desc|
           if item_desc[0]==array[0]
