@@ -11,7 +11,7 @@ module DataBase
     $array_m.push(new_value).uniq! # insere e remove valores repetidos.
     $itens = $array_m.transpose[0]
     $values = $array_m.transpose[1]
-    $desc_q_min = $array_m.transpose[2].reject!(&:zero?).min
+    $desc_q_min = $array_m.transpose[2].reject(&:zero?).min
     $array_m
   end
 
