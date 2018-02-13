@@ -21,8 +21,8 @@ class UnitTest
       to_array(array[0]) # envia os itens para calcular o valor.
       p @test.apply_values # sem desconto.
       p result = @test.apply_desc # com desconto.
-      result.empty? ? list = 0 : list = (result.map {|arr| arr[1]}).reduce(:+)
-      p comparacao = (list)==array[1] # meu teste unitario comparando com o valor do array.
+      result.empty? ? value = 0 : value = (result.map {|arr| arr[1]}).reduce(:+)
+      p comparacao = (value==array[1]) # meu teste unitario comparando com o valor do array.
       raise "O Teste Unitário Falhou!!!" unless comparacao
     }
   end
