@@ -1,5 +1,4 @@
 # encoding: UTF-8
-
 module DataBase
 
   # Simulando uma lista de uma base, item, valor, quant_d, valor_desconto
