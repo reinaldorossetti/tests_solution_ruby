@@ -6,6 +6,8 @@ Se tiver usando o GEMFILE você precisa adicionar ao arquivo o rake, senão prec
 gem 'rake', '12.3.0'
 ```
 
+Dentro do Rakefile, deve ficar o código para realizar os testes.
+
 ```ruby
 require 'rubygems'
 require 'cucumber'
