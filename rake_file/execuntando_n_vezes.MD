@@ -1,4 +1,4 @@
-# Devemos primeiro criar o arquivo "Rakefile" sem aspas, e sem extensão de arquivo.
+## Devemos primeiro criar o arquivo "Rakefile" sem aspas, e sem extensão de arquivo.
 
 ```ruby
 require 'rubygems'
@@ -21,4 +21,4 @@ end
 task build: %w[massa:gerar_amostra_GLI_pronto_para_execucao]
 ```
 
-# No CMD/Shell digitar:  bundle exec rake build QUANT=3
+## No CMD/Shell você deve digitar o comando a seguir:  bundle exec rake build QUANT=3
