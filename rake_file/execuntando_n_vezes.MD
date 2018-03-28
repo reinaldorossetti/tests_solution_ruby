@@ -1,4 +1,10 @@
-## Devemos primeiro criar o arquivo "Rakefile" sem aspas, e sem extensão de arquivo.
+
+## Devemos primeiro criar o arquivo "Rakefile" sem aspas, e sem extensão de arquivo, no projeto que desejamos utilizar o rake.
+
+Se tiver usando o GEMFILE você precisa adicionar ao arquivo o rake, senão precisa instalar a gem.
+```ruby
+gem 'rake', '12.3.0'
+```
 
 ```ruby
 require 'rubygems'
