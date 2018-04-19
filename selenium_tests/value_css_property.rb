@@ -9,11 +9,14 @@ driver.get("http://www.google.com.br")
 
 driver.manage.timeouts.implicit_wait = 10  # espera implicita de 10 segundos.
 
-# faz a busca novamente após a ação.
+# faz a busca do elemento.
 element = driver.find_element(id: "lst-ib")
 
 # faz a ação
 element.send_key "Blog vida de testador"
+
+# faz a busca novamente após a ação.
+element = driver.find_element(id: "lst-ib")
 
 # somente pra saber se enviou.
 p element[:value] # python não faz invocar um Simbolo/name interno.
