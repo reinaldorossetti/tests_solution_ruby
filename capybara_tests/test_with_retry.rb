@@ -14,14 +14,14 @@ def mouse_sobre
   $session.within_frame('iframeResult', :visible=>true){
     count = 0
     begin
-      $start = Time.now # inicia o time.
+      start = Time.now # inicia o time.
       p count += 1
       element = $session.find('a', :text => 'reinaldo', :visible => true)
       element.hover
 
     rescue => ex
         p ex
-        p diff = Time.now - $start
+        p diff = Time.now - start
         Capybara.default_max_wait_time = 10
         retry  if count < 4
     end  
